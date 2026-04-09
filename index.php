@@ -21,7 +21,7 @@
     <script src="sketch.js"></script>
     </div>
     <div class="leaderboard-container">
-    <h2 class="lb-title">Leaderboard</h2>
+    <h2 class="lb-title">LEADERBOARD</h2>
     <?php
       $link = mysqli_init(); 
       mysqli_real_connect_caesar($link);
@@ -38,7 +38,7 @@
       if ($result) 
       {
         echo "<table>";
-        echo "<tr><th style=\"text-align: center; \">Helyezés</th><th>Játékos</th><th>Rekord</th></tr>";
+        //echo "<tr><th style=\"text-align: center; \">Helyezés</th><th>Játékos</th><th>Rekord</th></tr>";
 
         $i = 1;
         while ($row = $result->fetch_assoc()) 

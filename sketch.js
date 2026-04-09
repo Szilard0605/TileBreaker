@@ -17,9 +17,9 @@ class Player
   render()
   {
     stroke(1);
-    fill(color(255));
+    fill(color(255, 253, 134));
     rectMode(CORNER);
-    rect(this.posX - this.Width / 2, this.posY - this.Height / 2, this.Width, this.Height);  
+    rect(this.posX - this.Width / 2, this.posY - this.Height / 2, this.Width, this.Height);
   }
   
   move(direction)
@@ -75,9 +75,11 @@ class Tile
         return;
       
       noStroke();
-      fill(color(this.r, this.g, this.b, 255));
+      fill(color(255, 135, 135, 255));
+      //fill(color(135, 255, 189, 255));
+      stroke(color(0, 0, 0));
       rectMode(CORNER);
-      rect(this.posX - this.Width / 2, this.posY - this.Height / 2, this.Width, this.Height); 
+      rect(this.posX - this.Width / 2, this.posY - this.Height / 2, this.Width, this.Height, 0); 
     }
   
     getWidth()
@@ -400,12 +402,14 @@ function draw()
     
     if (keyIsDown(65) || keyIsDown(LEFT_ARROW)) 
     {
-      player.move(-1);
+      if(player.getPosX() - player.getWidth() / 2 > 0)
+        player.move(-1);
     }
 
     if (keyIsDown(68) || keyIsDown(RIGHT_ARROW))
     {
-       player.move(1);  
+      if(player.getPosX() + player.getWidth() / 2 < width)
+        player.move(1);  
     }
     
     ball.render();

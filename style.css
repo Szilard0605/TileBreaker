@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'mainfont';
+  src: url('Font.otf');
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -44,9 +49,11 @@ nav ul li a:hover {
 
 .lb-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 48px;
   margin-bottom: 10px;
   color: rgb(0, 0, 0);
+  
+  font-family: 'mainfont';
 }
 
 .main-container {
@@ -56,16 +63,6 @@ nav ul li a:hover {
   margin-top: 20px;
 }
 
-.leaderboard-container {
-  align-self: flex-start;   
-  margin-left: 1%;
-  margin-top: 130px;
-
-  background-color: #fffd86;
-  padding: 15px;
-  border-radius: 10px;
-  border: 3px solid #333;
-}
 
 canvas {
   display: flex;
@@ -74,6 +71,7 @@ canvas {
   margin-top: 5%;
   border: 5px solid #333;
   display: flex;
+  border-radius: 10px;
 }
 
 table {
@@ -81,41 +79,53 @@ table {
   background-color: #ffffff;
 }
 
+.leaderboard-container {
+  align-self: flex-start;   
+  margin-left: 1%;
+  margin-top: 1%;
+
+  
+  background-color: rgb(204, 204, 244);
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid #333;
+}
+
 th {
   color: rgb(0, 0, 0);
-  background-color: rgb(204, 204, 244);
+  background-color: #fffd86;
   font-weight: bold;
   border: 2px solid black;
+  border-radius: 5px;
   padding: 8px 16px;
   text-align: center;
 }
 
 td {
+  font-family: 'mainfont';
   color: black;
-  font-weight: bold;
+  /*font-weight: bold;*/
   border: 2px solid black;
+  border-radius: 5px;
   padding: 8px 16px;
   text-align: center;
-  background-color: rgb(204, 204, 244);
-  
+  background-color: #fffd86;
+  font-size: 24px;
 }
 
 .gold td {
   background-color: gold;
   color: black;
-  font-weight: bold;
 }
 
 .silver td {
   background-color: silver;
   color: black;
-  font-weight: bold;
 }
 
 .bronze td {
   background-color: #cd7f32;
   color: black;
-  font-weight: bold;
 }
 
 .logo {
