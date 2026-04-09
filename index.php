@@ -15,9 +15,12 @@
           <li><a href="../Games.html">Játékok</a></li>
       </ul>
   </nav>
-  <img src="logo.png" alt="TileBreaker Logo" class="logo"/>
+  <img src="Assets/Images/logo.png" alt="TileBreaker Logo" class="logo"/>
   <div class="main-container">
     <div class="game-container">
+    <script src="Ball.js"></script>
+    <script src="Player.js"></script>
+    <script src="Tile.js"></script>
     <script src="sketch.js"></script>
     </div>
     <div class="leaderboard-container">
