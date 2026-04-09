@@ -1,0 +1,125 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #9f9b9b;
+}
+
+#canvas-container {
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav ul li {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+}
+
+.lb-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.leaderboard-container {
+  align-self: flex-start;   
+  margin-left: 1%;
+  margin-top: 130px;
+
+  background-color: #fffd86;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid #333;
+}
+
+canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  border: 5px solid #333;
+  display: flex;
+}
+
+table {
+  /*border: 1px ridge white;*/
+  background-color: #ffffff;
+}
+
+th {
+  color: rgb(0, 0, 0);
+  background-color: rgb(204, 204, 244);
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+td {
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 8px 16px;
+  text-align: center;
+  background-color: rgb(204, 204, 244);
+  
+}
+
+.gold td {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+}
+
+.silver td {
+  background-color: silver;
+  color: black;
+  font-weight: bold;
+}
+
+.bronze td {
+  background-color: #cd7f32;
+  color: black;
+  font-weight: bold;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+}
