@@ -152,8 +152,9 @@ function checkPlayerCollision()
   
   if(circleRect(bpX + ball.getRadius() / 2, bpY - ball.getRadius() / 2, bpR, player.getPosX() - player.getWidth() / 2, player.getPosY() - player.getHeight() / 2, player.getWidth(), player.getHeight()))
   {
-    let randomMagic = random(-0.5, 0.5);
-    ball.setDirection(-ball.getDirX() + randomMagic, -1);
+    let distFromCenter = (bpX - player.getPosX()) / (player.getWidth() / 2);
+    console.log(distFromCenter);
+    ball.setDirection(-ball.getDirX() + distFromCenter * 0.5, -1);
     playerHitSound.play();
   }
 }
