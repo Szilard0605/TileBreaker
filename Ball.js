@@ -3,7 +3,7 @@ class Ball
 {
     constructor()
     {
-      this.speed = 6.0;
+      this.speed = 420;
       this.radius = 20;
       this.reset();
     }
@@ -12,20 +12,21 @@ class Ball
     {
       stroke(1);
       fill(color(255));
+      rectMode(CENTER);
       circle(this.posX, this.posY, this.radius);
     }
   
-    update()
+    update(deltaTime)
     {
-      this.posX += this.dirX * this.speed;
-      this.posY += this.dirY * this.speed;
+      this.posX += this.dirX * this.speed * deltaTime;
+      this.posY += this.dirY * this.speed * deltaTime;
     }
   
     reset()
     {
       this.posX = width / 2;
       this.posY = height - this.radius * 2;
-      this.dirX = random(0, 1);
+      this.dirX = 0;
       this.dirY = -1;
     }
 
